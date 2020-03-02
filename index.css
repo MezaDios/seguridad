@@ -1,0 +1,13 @@
+.w-90 {
+    width: 90% !important;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.fondito {
+    background-color: #edffea;
+}
+
+.unselectable {
+    user-select: none;
+}
