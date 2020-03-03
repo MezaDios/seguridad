@@ -36,7 +36,7 @@
                     <hr>
                     <div id="subtitulo" class="col-12 h6 p-4 text-justify text-secondary">
 
-                        <form id="form">
+                        <form id="form" action="/controlador.usuario.php" method="post">
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
@@ -44,7 +44,7 @@
                                         <i class="fas fa-user"></i>
                                     </span>
                                 </div>
-                                <input type="text" id="username" class="form-control" placeholder="Username"
+                                <input type="text" id="username" name="username" class="form-control" placeholder="Username"
                                     aria-label="Username" title="Username">
                             </div>
 
@@ -52,7 +52,7 @@
                                 <span class="input-group-text">
                                     <i class="fas fa-key"></i>
                                 </span>
-                                <input type="password" id="password" class="form-control" placeholder="Password"
+                                <input type="password" id="password" name="password" class="form-control" placeholder="Password"
                                     aria-label="Password" title="Password">
                             </div>
 
