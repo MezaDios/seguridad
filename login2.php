@@ -1,60 +1,98 @@
 <?php 
-
-require_once("controlador.usuarios.php");
-
+require_once('controlador.php');
 ?>
 
-<div id="back"></div>
+<!doctype html>
+<html lang="en">
 
-<div class="login-box">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <div class="login-logo">
+    <!--Font Awesome-->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
-    <img src="vistas/img/plantilla/logo-blanco-bloque.png" class="img-responsive" style="padding:30px 100px 0px 100px" alt="logo">
+    <!-- Bootstrap CSS -->
+    <!--
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+    <link rel="stylesheet" href="./index.css">
 
-  </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    
+    <script src="./sweetalert.min.js"></script>
 
-  <div class="login-box-body">
+    <title>Log in!</title>
+</head>
 
-    <p class="login-box-msg">Inicia sesión</p>
+<body class="fondito">
 
-    <form method="post">
+    <nav class="navbar navbar-white bg-primary shadow-sm">
+        <p class="navbar-brand mx-auto text-white unselectable" href="#">Login</p>
+    </nav>
 
-      <div class="form-group has-feedback">
+    <div class="w-90 rounded mt-4">
+        <div class="py-3 mb-0" style="border-radius: 4px 4px 0px 0px !important;">
+            <div class="px-lg-5">
+                <div class="shadow mx-auto rounded bg-white">
+                    <div id="titulo"
+                        class="col-12 h2 pt-4 pb-3 text-center text-primary text-break rounded unselectable">
+                        Ingresa tus credenciales
+                    </div>
+                    <hr>
+                    <div id="subtitulo" class="col-12 h6 p-4 text-justify text-secondary">
 
-        <input type="text" class="form-control" placeholder="Usuario" name="username" required>
+                        <form id="form" method="post" action="controlador.php"> 
 
-        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                                </div>
+                                <input type="text" id="username" name="user" class="form-control" placeholder="Username"
+                                    aria-label="Username" title="Username">
+                            </div>
 
-      </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">
+                                    <i class="fas fa-key"></i>
+                                </span>
+                                <input type="password" id="password" name="password" class="form-control" placeholder="Password"
+                                    aria-label="Password" title="Password">
+                            </div>
 
-      <div class="form-group has-feedback">
+                            <div class="input-group">
+                                <button id="btnSubmit" type="submit" class="btn btn-primary w-50 mx-auto">
+                                    <i class="fas fa-sign-in-alt"></i>
+                                    Submit
+                                </button>
+                            </div>
 
-        <input type="password" class="form-control" placeholder="Contraseña" name="password" required>
+                        </form>
 
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-
-      </div>
-
-      <div class="row">
-
-        <div class="col-xs-4">
-
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Ingresar</button>
-
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
 
-      </div>
+    
+    <script src="./index.js"></script>
 
-      <?php 
+</body>
 
-        $login = new ControladorUsuarios();
-        $login -> ctrLogin();
-
-       ?>
-
-    </form>
-
-  </div><!-- /.login-box-body -->
-
-</div><!-- /.login-box -->
+</html>

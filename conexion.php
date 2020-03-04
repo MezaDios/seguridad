@@ -8,7 +8,7 @@ class Conexion{
 
 		$link->exec("set names utf8");
 
-		// var_dump("CONECTADO");
+		//var_dump("CONECTADO");
 
 		return $link;
 
@@ -18,4 +18,3 @@ class Conexion{
 
 // $conectar = new Conexion();
 // $conectar ->conectar();
-
