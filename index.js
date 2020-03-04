@@ -1,15 +1,20 @@
 var form = document.getElementById('form');
 var boton = document.getElementById('btnSubmit');
-var username = document.getElementById('username').value;
-var password = document.getElementById('password').value;
+var username = document.getElementById('username');
+var password = document.getElementById('password');
+
+var passphrase = "meza";
 
 
 form.onsubmit = function (e) {
-    e.preventDefault();
+    if (username.value.length == 0 || password.value.length == 0) {
+        e.preventDefault();
 
-    swal({
-        title: "Ora",
-        icon: "info",
-        text: "" + CryptoJS.SHA3(password)
-    });
+        swal({
+            title: "Debes llenar todos los campos",
+            icon: "error"
+        });
+    }
+
+
 }
