@@ -2,9 +2,12 @@
 
 require_once "conexion.php";
 
+// var_dump("HOLA MODELO");
+
+
 class ModeloUsuarios {
 
-    static public function mdlMostrarUsuario($tabla, $item, $valor) {
+    static public function mdlMostrarUsuarios($tabla, $item, $valor) {
 
         if ($item != null) {
 			
