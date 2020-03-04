@@ -1,5 +1,7 @@
 <?php 
+
 require_once('controlador.php');
+
 ?>
 
 <!doctype html>
@@ -83,6 +85,7 @@ require_once('controlador.php');
                             </div>
 
                         </form>
+
 
                     </div>
                 </div>

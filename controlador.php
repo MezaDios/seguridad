@@ -29,7 +29,7 @@ if (isset($_POST["user"]) && isset($_POST["password"])) {
 
     //Encripta información:
     $dato_encriptado = $encriptar($dato);
-    echo $dato_encriptado;
+    $dato_encriptado;
 
     // Enviar datos al modelo
     $tabla = "tbl_usuarios";
